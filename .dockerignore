@@ -1,0 +1,51 @@
+# Git
+.git
+.gitignore
+.github
+
+# IDE
+.idea
+.vscode
+.claude
+*.swp
+*.swo
+*~
+
+# Documentation
+*.md
+!README.md
+docs/
+
+# CI/CD
+.github/
+
+# Build artifacts
+target/
+dist/
+build/
+
+# Dependencies
+Cargo.lock
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+*.profdata
+*.profraw
+
+# Development
+docker-compose*.yml
+Makefile
+setup.sh
+
+# Misc
+*.log
+tmp/

@@ -1,0 +1,17 @@
+[package]
+name = "prtl-messages"
+version = "0.1.0"
+edition.workspace = true
+publish = true
+description = "Message protocol for prtl proxy services"
+license.workspace = true
+repository.workspace = true
+keywords = ["proxy", "messaging", "nats", "microservices"]
+categories = ["network-programming", "asynchronous"]
+
+[dependencies]
+bitflags = { version = "2", features = ["serde"] }
+http = "1"
+http-serde-ext = "1"
+serde.workspace = true
+

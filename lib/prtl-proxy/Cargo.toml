@@ -1,0 +1,24 @@
+[package]
+name = "prtl-proxy"
+version = "0.1.0"
+edition.workspace = true
+publish = true
+description = "Core library for building prtl proxy services with NATS messaging"
+license.workspace = true
+repository.workspace = true
+keywords = ["proxy", "nats", "messaging", "async", "microservices"]
+categories = ["network-programming", "asynchronous", "web-programming"]
+
+[features]
+utils-json = ["dep:simd-json"]
+
+[dependencies]
+async-nats.workspace = true
+async-trait.workspace = true
+futures-util = "0.3"
+http.workspace = true
+prtl-messages.workspace = true
+rmp-serde.workspace = true
+simd-json = { version = "0.17", optional = true }
+tokio = { version = "1", features = ["full"] }
+tracing.workspace = true

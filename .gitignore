@@ -1,0 +1,32 @@
+# Rust
+/target
+Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# IDE
+/.claude
+/.idea
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+*.profdata
+*.profraw
+
+# Build artifacts
+dist/
+build/
+*.wasm

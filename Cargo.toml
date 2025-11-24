@@ -1,0 +1,32 @@
+[workspace]
+resolver = "3"
+members = ["bin/api", "examples/proxy-cdnlibs", "lib/prtl-messages", "lib/prtl-proxy"]
+
+[workspace.package]
+edition = "2024"
+publish = false
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/sekiju/prtl"
+
+[workspace.dependencies]
+async-nats = "0.45"
+async-trait = "0.1"
+http = "1"
+prtl-messages = { path = "lib/prtl-messages" }
+prtl-proxy = { path = "lib/prtl-proxy" }
+rmp-serde = "1.3.0"
+serde = { version = "1", features = ["derive"] }
+tokio = { version = "1", features = ["macros", "rt", "rt-multi-thread"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[profile.release]
+opt-level = 3
+debug = true
+debug-assertions = false
+overflow-checks = false
+lto = true
+panic = 'unwind'
+incremental = false
+codegen-units = 1
+rpath = false
